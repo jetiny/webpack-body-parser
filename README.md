@@ -34,13 +34,13 @@ Other body parsers you might be interested in:
 ## Installation
 
 ```sh
-$ npm install body-parser
+$ npm install webpack-body-parser
 ```
 
 ## API
 
 ```js
-var bodyParser = require('body-parser')
+var bodyParser = require('webpack-body-parser')
 ```
 
 ### bodyParser.json(options)
@@ -246,7 +246,7 @@ This is the simplest setup.
 
 ```js
 var express = require('express')
-var bodyParser = require('body-parser')
+var bodyParser = require('webpack-body-parser')
 
 var app = express()
 
@@ -266,12 +266,12 @@ app.use(function (req, res) {
 ### express route-specific
 
 This example demonstrates adding body parsers specifically to the routes that
-need them. In general, this is the most recommend way to use body-parser with
+need them. In general, this is the most recommend way to use webpack-body-parser with
 express.
 
 ```js
 var express = require('express')
-var bodyParser = require('body-parser')
+var bodyParser = require('webpack-body-parser')
 
 var app = express()
 
@@ -314,13 +314,13 @@ app.use(bodyParser.text({ type: 'text/html' }))
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/body-parser.svg
-[npm-url]: https://npmjs.org/package/body-parser
-[travis-image]: https://img.shields.io/travis/expressjs/body-parser/master.svg
-[travis-url]: https://travis-ci.org/expressjs/body-parser
-[coveralls-image]: https://img.shields.io/coveralls/expressjs/body-parser/master.svg
-[coveralls-url]: https://coveralls.io/r/expressjs/body-parser?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/body-parser.svg
-[downloads-url]: https://npmjs.org/package/body-parser
+[npm-image]: https://img.shields.io/npm/v/webpack-body-parser.svg
+[npm-url]: https://npmjs.org/package/webpack-body-parser
+[travis-image]: https://img.shields.io/travis/expressjs/webpack-body-parser/master.svg
+[travis-url]: https://travis-ci.org/expressjs/webpack-body-parser
+[coveralls-image]: https://img.shields.io/coveralls/expressjs/webpack-body-parser/master.svg
+[coveralls-url]: https://coveralls.io/r/expressjs/webpack-body-parser?branch=master
+[downloads-image]: https://img.shields.io/npm/dm/webpack-body-parser.svg
+[downloads-url]: https://npmjs.org/package/webpack-body-parser
 [gratipay-image]: https://img.shields.io/gratipay/dougwilson.svg
 [gratipay-url]: https://www.gratipay.com/dougwilson/
