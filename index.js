@@ -7,8 +7,6 @@
 /**
  * Module dependencies.
  */
-
-var deprecate = require('depd')('body-parser')
 var fs = require('fs')
 var path = require('path')
 
@@ -25,39 +23,19 @@ var path = require('path')
  * Module exports.
  * @type {Parsers}
  */
-
-exports = module.exports = deprecate.function(bodyParser,
-  'bodyParser: use individual json/urlencoded middlewares')
-
-/**
- * Path to the parser modules.
- */
-
-var parsersDir = path.join(__dirname, 'lib', 'types')
+var exports = module.exports = bodyParser;
 
 /**
  * Auto-load bundled parsers with getters.
  */
 
-fs.readdirSync(parsersDir).forEach(function onfilename(filename) {
-  if (!/\.js$/.test(filename)) return
-
-  var loc = path.resolve(parsersDir, filename)
-  var mod
-  var name = path.basename(filename, '.js')
-
-  function load() {
-    if (mod) {
-      return mod
-    }
-
-    return mod = require(loc)
-  }
-
+['json','text','raw','urlencoded'].forEach(function (name) {
   Object.defineProperty(exports, name, {
     configurable: true,
     enumerable: true,
-    get: load
+    get: function(){
+        return require('./lib/types/'+name)
+    }
   })
 })
 
