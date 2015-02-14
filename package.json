@@ -1,7 +1,7 @@
 {
   "name": "webpack-body-parser",
   "description": "Node.js body parsing middleware for webpack",
-  "version": "1.11.090",
+  "version": "1.11.110",
   "contributors": [
     "jetiny <jetiny8@gmail.com>",
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
